@@ -1,12 +1,14 @@
-{% extends '::base.html.twig' %} {% block stylesheets %} {{ parent() }}
-<link rel="stylesheet" href="{{ asset('css/subscribe.css') }}"
-	type="text/css" media="all" />
-{% endblock %} {% block body %}
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %} {{ parent() }}
+<link rel="stylesheet" href="{{ asset('css/subscribe.css') }}" type="text/css" media="all" />
+{% endblock %}
+
+{% block body %}
 <section class="cover">
 	{% block content %}
 	<div class="subscription_bloc connection">
 		<h1 class="section_title">Connectez-vous</h1>
-
 
 		<form action="{{ path("fos_user_security_check") }}" method="post"
 			class="connection_form">
