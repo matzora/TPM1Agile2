@@ -1,0 +1,50 @@
+### Symfony template
+
+# Cache and logs (Symfony2)
+/web/app/cache/*
+/web/app/logs/*
+/web/!app/cache/.gitkeep
+/web/!app/logs/.gitkeep
+
+# Parameters
+/web/app/config/parameters.yml
+/web/app/config/parameters.ini
+
+# Managed by Composer
+/web/app/bootstrap.php.cache
+/web/var/bootstrap.php.cache
+/web/bin/*
+/web/!bin/console
+/web/!bin/symfony_requirements
+/web/vendor/
+
+# Assets and user uploads
+/web/web/bundles/
+/web/web/uploads/
+
+# PHPUnit
+/web/app/phpunit.xml
+/web/phpunit.xml
+
+# Build data
+/web/build/
+/web/.buildpath
+
+# Composer
+/web/composer.phar
+/web/composer.lock
+
+# Eclipse
+/web/.settings/
+/web/.buildpath/
+/web/.metadata/
+/web/.project/
+
+# PHPStorm
+/web/.idea/
+
+# Netbeans
+/web/nbproject/
+
+# Being edited files
+/web/*~
