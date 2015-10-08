@@ -1,0 +1,21 @@
+{% extends "@TPM1Agile2User/layout.html.twig" %} {% block content %}
+<div class="message_bloc">
+	<h1>Félicitations {{ user.firstname }} {{ user.lastname }} !</h1>
+
+	<p>Votre inscription au service à été validée !</p>
+
+	<p>Vous pouvez désormais utiliser le service KLASS pour gérer vos
+		déplacements !</p>
+	{% if app.session is not empty %} {% set targetUrl =
+	app.session.get('_security.' ~ app.security.token.providerKey ~
+	'.target_path') %} {% if targetUrl is not empty %}
+	<p>
+		<a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a>
+	</p>
+	{% endif %} {% endif %}
+	<div class="green_btn">
+		<a class="btn green_btn" href="{{ path('klass_homepage') }}">Retourner
+			à l'accueil</a>
+	</div>
+</div>
+{% endblock content %}

@@ -1,0 +1,10 @@
+tpm1_agile2_back:
+    resource: "@TPM1Agile2BackBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+tpm1_agile2_front:
+    resource: "@TPM1Agile2FrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
+fos_user:
+  resource: "@FOSUserBundle/Resources/config/routing/all.xml"

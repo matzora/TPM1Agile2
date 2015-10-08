@@ -1,0 +1,3 @@
+TPM1Agile2_back_homepage:
+    path:     /
+    defaults: { _controller: TPM1Agile2BackBundle:Default:index }
