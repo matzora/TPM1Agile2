@@ -50,7 +50,6 @@
 
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-
                         {% if not app.user %}
                             <li class="popdown">
                                 <a class="btn" id="connection_popdown" href="{{ path('fos_user_security_login') }}"
@@ -58,25 +57,16 @@
                                     <span><i class="fa fa-user"></i></span><span>Connexion</span>
                                 </a>
                             </li>
-                            <li>
-                                <a class="btn" href="{{ path('fos_user_registration_register') }}">
+                            {% if app.request.get('_route') != 'TPM1Agile2_back_homepage' %}
+                                <li>
+                                    <a class="btn" href="{{ path('fos_user_registration_register') }}">
                                     <span>
                                         <i class="fa fa-pencil"></i>
                                     </span>
-                                    <span>Inscription</span>
-                                </a>
-                            </li>
-                        {% endif %}
-
-                        {% if (app.user and is_granted("ROLE_ADMIN")) %}
-                            <li class="popdown">
-                                <a class="btn" href="{{ path('klass_stats') }}" role="button">
-                                    <span>
-                                        <i class="fa fa-bar-chart"></i>
-                                    </span>
-                                    <span>statistiques</span>
-                                </a>
-                            </li>
+                                        <span>Inscription</span>
+                                    </a>
+                                </li>
+                            {% endif %}
                         {% endif %}
                     </ul>
                 </div>
