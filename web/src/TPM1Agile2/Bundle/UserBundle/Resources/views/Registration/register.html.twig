@@ -13,108 +13,23 @@
 			<div class="form-title">
 				<h2>Contact</h2>
 			</div>
-			<div class="form-inline civility">
-				<div class="form-group">{{ form_label(form.gender) }} {# Erreurs
-					pour ce champ précis #} {{ form_errors(form.gender) }} {#
-					Génération du champ #} {{ form_widget(form.gender) }}</div>
-			</div>
-			<div class="form-inline name">
-				<div class="form-group left-group">{{ form_label(form.lastname) }}
-					{{ form_errors(form.lastname) }} {{ form_widget(form.lastname) }}</div>
-				<div class="form-group right-group">{{ form_label(form.firstname) }}
-					{{ form_errors(form.firstname) }} {{ form_widget(form.firstname) }}
-				</div>
-			</div>
-			<div class="form-inline contact">
-				<div class="form-group left-group">{{ form_label(form.email) }} {{
-					form_errors(form.email) }} {{ form_widget(form.email) }}</div>
-				<div class="form-group right-group">{{ form_label(form.phone) }} {{
-					form_errors(form.phone) }} {{ form_widget(form.phone) }}</div>
+			<div class="form-inline username">
+				<div class="form-group left-group">{{ form_label(form.username) }}
+					{{ form_errors(form.username) }} {{ form_widget(form.username) }}</div>
 			</div>
 			<div class="form-inline password">
 				<div class="pass_line">{{ form_row(form.plainPassword) }}</div>
 			</div>
 			<!--identity end-->
 
-			<!--direction-->
-			<div class="form-title">
-				<h2>Adresse</h2>
-			</div>
-			<div class="form-inline streetnumber">
-				<div class="form-group">{{ form_label(form.address.name) }} {{
-					form_errors(form.address.name) }} {{ form_widget(form.address.name)
-					}}</div>
-			</div>
-			<div class="form-inline location">
-				<div class="form-group left-group">{{
-					form_label(form.address.zipCode) }} {{
-					form_errors(form.address.zipCode) }} {{
-					form_widget(form.address.zipCode) }}</div>
-				<div class="form-group right-group">{{ form_label(form.address.city)
-					}} {{ form_errors(form.address.city) }} {{
-					form_widget(form.address.city) }}</div>
-			</div>
-			<div class="moreinformation">{{ form_label(form.address.comment) }}
-				{{ form_errors(form.address.comment) }} {{
-				form_widget(form.address.comment) }}</div>
-			<!--direction end-->
-
-			<!--status-->
-			<div class="form-title">
-				<h2>Vous êtes:</h2>
-			</div>
-			<div class="form-inline status">
-				<div class="form-group">{{ form_label(form.status) }} {{
-					form_errors(form.status) }} {{ form_widget(form.status) }}</div>
-			</div>
-			<div class="form-inline structure">
-				<div class="form-group">{{ form_label(form.structure) }} {{
-					form_errors(form.structure) }} {{ form_widget(form.structure) }}</div>
-			</div>
-			<div class="form-inline age">
-				<div class="form-group">{{ form_label(form.age) }} {{
-					form_errors(form.age) }} {{ form_widget(form.age) }}</div>
-			</div>
-			<div class="form-inline authorization">
-				<span>Veuillez télécharger et remplir <a href="#">l'autorisation
-						parentale</a></span>
-			</div>
-			<!--status end-->
-
-			<!--more informations-->
-			<div class="form-title">
-				<h2>Informations complémentaires:</h2>
-			</div>
-			<div class="form-inline driverornot">
-				<div class="form-group">{{ form_label(form.type) }} {{
-					form_errors(form.type) }} {{ form_widget(form.type) }}</div>
-			</div>
-			<div class="form-inline licenceplate">
-				<div class="form-group">{{ form_label(form.licencePlate) }} {{
-					form_errors(form.licencePlate) }} {{ form_widget(form.licencePlate)
-					}}</div>
-			</div>
-			<div class="form-inline trip">
-				<div class="form-group">{{ form_label(form.axis) }} {{
-					form_errors(form.axis) }} {{ form_widget(form.axis) }}</div>
-			</div>
-			<div class="checkbox-inline">
-				<div class="form-group">{{ form_errors(form.truth) }} {{
-					form_widget(form.truth) }} {{ form_label(form.truth) }}</div>
-			</div>
-			<div class="checkbox-inline">
-				<div class="form-group">{{ form_errors(form.cgu) }} {{
-					form_widget(form.cgu) }} {{ form_label(form.cgu) }}</div>
-			</div>
-
+			
 			<div
-				class="green_btn validation_button subscription_validation_button">
-				{{ form_widget(form.validation) }}</div>
+				class="grey_btn validation_button subscription_validation_button">
+				<input type="submit" value="{{ 'registration.submit'|trans }}"/>
+			</div>
 
 			{{ form_rest(form) }} {{ form_end(form) }}
 		</div>
-		<aside class="aside_menu">{{
-			include('TPM1Agile2UIBundle:includes:downloads.html.twig') }}</aside>
 	</div>
 </section>
 {% endblock %}
