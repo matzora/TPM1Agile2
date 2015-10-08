@@ -6,6 +6,8 @@
 !app/logs/.gitkeep
 
 # Parameters
+/.settings
+/.idea
 /app/config/parameters.yml
 /app/config/parameters.ini
 
