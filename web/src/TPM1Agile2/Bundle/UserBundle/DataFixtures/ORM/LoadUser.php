@@ -30,107 +30,38 @@ class LoadUser implements FixtureInterface, ContainerAwareInterface, OrderedFixt
      */
     public function load(ObjectManager $manager)
     {
-        $addressRepository = $this->container->get('doctrine')
-            ->getManager()
-            ->getRepository('TPM1Agile2UserBundle:Address');
-
-        $address = $addressRepository->findAll(array());
+       
 
         // On ajoute un administrateur
         $users[] = array(
-            'gender' => 1,
-            'firstname' => 'admin',
-            'lastname' => 'admin',
-            'email' => 'admin@admin.com',
+            'username' => 'admin',
             'enabled' => true,
             'roles' => array(
                 'ROLE_ADMIN'
             ),
             'plainPassword' => 'lol',
-            'phone' => '123456789',
-            'licencePlate' => '123456789',
-            'status' => 'status',
-            'structure' => 'structure',
-            'age' => 1,
-            'type' => 'type',
-            'address' => $address[0],
-            'createDate' => new \DateTime('2015-01-01')
         );
 
         // On ajoute un utilisateur lambda
         $users[] = array(
-            'gender' => 1,
-            'firstname' => 'Alexandre',
-            'lastname' => 'LISCIA',
-            'email' => 'alexandre.liscia@admin.com',
+            'username' => 'alexandre.liscia',
             'enabled' => true,
             'roles' => array(
                 'ROLE_USER'
             ),
             'plainPassword' => 'lol',
-            'phone' => '123456789',
-            'licencePlate' => '123456789',
-            'status' => 'Etudiant',
-            'structure' => 'IMIE',
-            'age' => 1,
-            'type' => 'Conducteur',
-            'address' => $address[0],
-            'createDate' => new \DateTime('2015-01-01')
         );
-
-        /*
-         * Création des utilisateurs en masse
-         */
-
-        $type = array(
-            'Conducteur',
-            'Passager'
-        );
-
-        $status = array(
-            'Etudiant',
-            'Enseignant',
-            'Salarié'
-        );
-
-        $j = 0;
-        while ($j < 50) {
-            $a = rand(0, (count($address) - 1));
-
-            // Calcul des dates
-            $dateFin = strtotime('2015-12-31');
-            $dateDebut = strtotime('2014-01-01');
-            $nbJoursAleatoire = rand(0, round(($dateFin - $dateDebut) / (60 * 60 * 24)));
-
-            $d = date("Y-m-d", strtotime("2014-01-01 + " . $nbJoursAleatoire . " days"));
-
-            $users[] = array(
-                'gender' => rand(0, 1),
-                'firstname' => 'toto',
-                'lastname' => 'toto',
-                'email' => 'toto' . $j . '@admin.com',
-                'enabled' => true,
-                'roles' => array(
-                    'ROLE_USER'
-                ),
-                'plainPassword' => 'lol',
-                'phone' => '123456789',
-                'licencePlate' => '123456789',
-                'status' => $status[rand(0, 2)],
-                'structure' => 'IMIE',
-                'age' => rand(18, 30),
-                'type' => $type[rand(0, 1)],
-                'address' => $address[$a],
-                'createDate' => new \DateTime($d)
-            );
-            $j++;
-        }
+       
 
         $userManager = $this->container->get('fos_user.user_manager');
 
         foreach ($users as $userData) {
             $user = $userManager->createUser();
-            $user->hydrate($userData);
+            $user->setUsername($userData['username']);
+            $user->setEnabled($userData['enabled']);
+            $user->setRoles($userData['roles']);
+            $user->setPlainPassword($userData['plainPassword']);
+            $user->setEmail($userData['username'] . "@prout.com");
             $manager->persist($user);
         }
 
@@ -144,6 +75,6 @@ class LoadUser implements FixtureInterface, ContainerAwareInterface, OrderedFixt
      */
     public function getOrder()
     {
-        return 2; // the order in which fixtures will be loaded
+        return 1; // the order in which fixtures will be loaded
     }
 }

@@ -1,0 +1,59 @@
+<?php
+/**************************************************************************
+ * Video.php, VideoBundle
+ *
+ * Maxime Léau Copyright 2015
+ * Description :
+ * Author(s) : Maxime Léau <maxime.leau@imie-rennes.fr>
+ * Licence : All right reserved.
+ * Last update : October 8, 2015
+ *
+ **************************************************************************/
+namespace TPM1Agile2\Bundle\VideoBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Video entity
+ * 
+ * @ORM\Table(name="tp_video")
+ * @ORM\Entity(repositoryClass="TPM1Agile2\Bundle\VideoBundle\Repository\VideoRepository")
+ * 
+ */
+class Video{
+	
+	/**
+	 * Video Unique ID.
+	 * 
+	 * @ORM\Id
+	 * @ORM\Column(type="integer")
+	 * @ORM\GeneratedValue(strategy="AUTO")
+	 * @var integer
+	 */
+	private $id;
+	
+	/**
+	 * Video url
+	 * 
+	 * @ORM\Column(type="string", length=255, nullable=false)
+	 * @var string
+	 */
+	private $url;
+	
+	/**
+	 * Video model
+	 * 
+	 * @ORM\Column(type="string", length=255, nullable=false)
+	 * @var string
+	 */
+	private $model;
+	
+	/**
+	 * Video Description
+	 * 
+     * @ORM\OneToOne(targetEntity="TPM1Agile2\Bundle\VideoBundle\Entity\Description", cascade={"persist"})
+	 * @var \TPM1Agile2\Bundle\VideoBundle\Entity\Description
+	 */
+	private $description;
+	
+}
