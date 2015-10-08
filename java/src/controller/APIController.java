@@ -18,18 +18,16 @@ public class APIController {
 	
 	public List<Video> getListeVideo(){
 		List<Video> videos = new ArrayList<Video>();
-		videos.add(new Video(1,null,"test1","test2"));
-		videos.add(new Video(1,null,"test1","test2"));
 		
 		return videos;
 	}
 	
 	public boolean checkCredentials(String id, String password){
-		return true;
+		return false;
 	}
 	
 	public boolean addComment(int idvideo, int iduser, String comment){
-		return true;
+		return false;
 	}
 	
 	public File readVideo(int idvideo){
