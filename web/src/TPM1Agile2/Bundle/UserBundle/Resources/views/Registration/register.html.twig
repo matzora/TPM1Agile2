@@ -22,8 +22,11 @@
 			</div>
 			<!--identity end-->
 
-			<input
-				class="green_btn validation_button subscription_validation_button" value="{{ 'registration.submit'|trans }}"/>
+			
+			<div
+				class="grey_btn validation_button subscription_validation_button">
+				<input type="submit" value="{{ 'registration.submit'|trans }}"/>
+			</div>
 
 			{{ form_rest(form) }} {{ form_end(form) }}
 		</div>
