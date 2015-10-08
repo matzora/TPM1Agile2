@@ -1,3 +1,8 @@
+tpm1_agile2_video:
+    resource: "@TPM1Agile2VideoBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 tpm1_agile2_back:
     resource: "@TPM1Agile2BackBundle/Resources/config/routing.yml"
     prefix:   /admin

@@ -37,7 +37,7 @@ input, select {
 h1 {
     font-size: 16px;
     margin-top: 0;
-    color: rgba(205, 67, 0, 1);
+    color: #333;
     text-transform: uppercase;
     line-height: 20px;
     font-weight: 200;
@@ -68,6 +68,14 @@ button {
     border-radius: 2px;
 }
 
+.content_bloc {
+    background-color: rgba(255, 255, 255, 0.99);
+    width: 50%;
+    min-height: 70%;
+    margin: auto;
+    padding: 25px;
+}
+
 .green_btn button, .green_btn a, .green_btn input {
     width: 200px;
     background: #8CC63F;
@@ -83,17 +91,28 @@ button {
     color: #fff;
 }
 
+.grey_btn button, .grey_btn a, .grey_btn input {
+    width: 200px;
+    background: #222;
+    border: 1px solid #222;
+    color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grey_btn button:hover, .grey_btn a:hover {
+    background: white;
+    border: 1px solid #222;
+    color: #222;
+}
+
 .white_btn button, .white_btn a {
     width: 200px;
     background: none;
-    border: 1px solid #8CC63F;
-    color: #8CC63F;
 }
 
-.white_btn button:hover, .white_btn a:hover {
-    background: #8CC63F;
-    border: 1px solid #8CC63F;
-    color: #fff;
+.white_btn button:hover, .white_btn a:hover, .white_btn input {
+    border: 1px solid #333;
 }
 
 .top_bar {
@@ -127,7 +146,7 @@ button {
 
 header {
     width: 100%;
-    background-color: rgba(129, 112, 104, 1);
+    background-color: white;
 }
 
 header .logo img {
@@ -145,7 +164,7 @@ header .logo img {
     position: relative;
     display: block;
     width: 100%;
-    height: 240px;
+    height: 600px;
     text-align: center;
     box-sizing: border-box;
     background-size: cover;
@@ -175,7 +194,7 @@ header .logo img {
     }
 
     .cover {
-        height: 380px;
+        height: 600px;
         padding: 25px;
         background-image: url(../img/background.jpg);
     }
@@ -234,7 +253,7 @@ header .logo img {
 /*surcharge bootstrap*/
 header .navbar-default {
     z-index: 10;
-    background-color: rgba(129, 112, 104, 1);
+    background-color: white;
     border: none;
     box-sizing: border-box;
     margin-bottom: 0;
@@ -255,7 +274,21 @@ header .navbar-brand {
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: rgba(255, 255, 255, 1);
+    color: #333;
+    transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > li:hover {
+    transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > li:hover {
+    border: 1px solid #333;
+    transition: all 0.5s;
+}
+
+.navbar-default .navbar-nav > li:hover > a {
+    transition: all 0.5s;
 }
 
 header nav.navbar-default .navbar-toggle:hover,
