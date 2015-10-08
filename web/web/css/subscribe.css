@@ -70,13 +70,13 @@
 	
 	.klass .cover_content {
 		position: absolute;
-		margin-left: -300px;
+		transform: translate(-50%, 0);
 		left: 50%;
 	}
 	
 	.klass .subscription_bloc {
 		display: inline-block;
-		width: 600px;
+		width: 420px;
 		background: rgba(255, 255, 255, 1);
 		padding: 25px;
 	}	
