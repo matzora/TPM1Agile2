@@ -17,7 +17,7 @@
             <Border x:Name="BorderBtnLogin" BorderBrush="#FF2680F3" BorderThickness="1" CornerRadius="5" VerticalAlignment="Center" Background="#FF2680F3" Margin="0,40,0,0" HorizontalAlignment="Center">
                 <Button x:Name="BtnLogin" HorizontalAlignment="Stretch" Margin="0" VerticalAlignment="Stretch" FontSize="26.667" MinHeight="55" MinWidth="210" Background="{x:Null}" Foreground="White" BorderThickness="0" Content="Se Connecter" Click="BtnLogin_Click"/>
             </Border>
-            <CheckBox x:Name="CheckBoxRememberMe" Content="Se Souvenir de moi ?" Margin="37,20,20,20" Foreground="#FF8D8787" FontSize="18.667" VerticalContentAlignment="Center"/>
+            <CheckBox x:Name="CheckBoxRememberMe" Content="Se Souvenir de moi ?" Margin="20" Foreground="#FF8D8787" FontSize="18.667" VerticalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         </StackPanel>
     </Grid>
 </Window>
