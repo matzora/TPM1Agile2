@@ -5,5 +5,11 @@
 {% endblock %}
 
 {% block body %}
-    <p>Vous êtes sur la page d'administration</p>
+    <section class="cover">
+        {% block content %}
+            <div class="_">
+                <h1>Bienvenue sur la page d'administration</h1>
+            </div>
+        {% endblock content %}
+    </section>
 {% endblock %}

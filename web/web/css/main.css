@@ -13,6 +13,7 @@ body {
     width: 100%;
     font-family: arial, helvetica, sans-ms;
     background-color: rgba(49, 43, 40, 1);
+    color: rgba(255, 255, 255, 1);
 }
 
 a {
@@ -66,6 +67,13 @@ button {
     text-transform: uppercase;
     border: 1px solid;
     border-radius: 2px;
+}
+
+.content_bloc {
+    background-color: rgba(255, 255, 255, 1);
+    width: 80%;
+    min-height: 70%;
+    margin: auto;
 }
 
 .green_btn button, .green_btn a, .green_btn input {
@@ -269,6 +277,7 @@ header .navbar-brand {
     color: #333;
     transition: all 0.5s;
 }
+
 .navbar-default .navbar-nav > li:hover {
     transition: all 0.5s;
 }
@@ -278,7 +287,7 @@ header .navbar-brand {
     transition: all 0.5s;
 }
 
-.navbar-default .navbar-nav > li:hover > a{
+.navbar-default .navbar-nav > li:hover > a {
     transition: all 0.5s;
 }
 
