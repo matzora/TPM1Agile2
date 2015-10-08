@@ -1,10 +1,18 @@
 {% extends '::base.html.twig' %}
 
-{% block stylesheets %} {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('css/index.css') }}"
-          type="text/css" media="all"/>
+{% block stylesheets %}
+    {{ parent() }}
 {% endblock %}
 
 {% block body %}
-    <p>Vous êtes sur la page d'administration</p>
+    <section class="cover">
+        {% block content %}
+            <div class="content_bloc">
+                <h1>Bienvenue sur la page d'administration !</h1>
+                <p>Cette page vous permet d'ajouter et de modérer les vidéos présentes sur la plateforme.
+                    <br>Vous pouvez également modérer les commentaires des utilisateurs.
+                </p>
+            </div>
+        {% endblock content %}
+    </section>
 {% endblock %}

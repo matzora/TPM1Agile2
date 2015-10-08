@@ -68,6 +68,14 @@ button {
     border-radius: 2px;
 }
 
+.content_bloc {
+    background-color: rgba(255, 255, 255, 0.99);
+    width: 50%;
+    min-height: 70%;
+    margin: auto;
+    padding: 25px;
+}
+
 .green_btn button, .green_btn a, .green_btn input {
     width: 200px;
     background: #8CC63F;
@@ -269,6 +277,7 @@ header .navbar-brand {
     color: #333;
     transition: all 0.5s;
 }
+
 .navbar-default .navbar-nav > li:hover {
     transition: all 0.5s;
 }
@@ -278,7 +287,7 @@ header .navbar-brand {
     transition: all 0.5s;
 }
 
-.navbar-default .navbar-nav > li:hover > a{
+.navbar-default .navbar-nav > li:hover > a {
     transition: all 0.5s;
 }
 
