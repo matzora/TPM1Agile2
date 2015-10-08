@@ -13,7 +13,6 @@ body {
     width: 100%;
     font-family: arial, helvetica, sans-ms;
     background-color: rgba(49, 43, 40, 1);
-    color: rgba(255, 255, 255, 1);
 }
 
 a {
@@ -70,10 +69,11 @@ button {
 }
 
 .content_bloc {
-    background-color: rgba(255, 255, 255, 1);
-    width: 80%;
+    background-color: rgba(255, 255, 255, 0.99);
+    width: 50%;
     min-height: 70%;
     margin: auto;
+    padding: 25px;
 }
 
 .green_btn button, .green_btn a, .green_btn input {
