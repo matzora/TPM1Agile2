@@ -45,4 +45,9 @@ public class APIControllerTest {
 		assertEquals(null,api.readVideo(0));
 	}
 
+	@Test
+	public void testSendRequest() {
+		assertEquals(null,api.sendRequest("http://jsonplaceholder.typicode.com/posts/1"));
+	}
+	
 }
