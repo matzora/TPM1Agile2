@@ -1,0 +1,24 @@
+{% extends '::error.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css" media="all"/>
+{% endblock %}
+
+{% block body %}
+    <section class="cover notfound">
+        <div class="message_bloc">
+            <div class="error_id">404</div>
+            <h1>Contenu non trouvé.</h1>
+            <blockquote>
+                <q class="close-quote">This is not the page you are looking for.</q>
+                <p><small>Obi-Wan Kenobi</small></p>
+            </blockquote>
+            <div class="btn green_btn">
+                <a class="navbar-brand logo" href="{{ path('klass_homepage') }}">
+                    Retourner à l'accueil
+                </a>
+            </div>
+        </div>            
+    </section>
+{% endblock body %}

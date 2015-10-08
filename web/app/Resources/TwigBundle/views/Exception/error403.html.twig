@@ -1,0 +1,27 @@
+{% extends '::error.html.twig' %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/index.css') }}" type="text/css" media="all"/>
+{% endblock %}
+
+{% block body %}
+    <section class="cover notallowed">
+        <div class="message_bloc">
+            <div class="error_id">403</div>
+            <h1>Vous ne passerez pas !</h1>
+            <blockquote>
+                <q class="close-quote">Je suis un serviteur du Feu Secret, qui détient la flamme d'Anor. Vous ne pouvez
+                    passer. Le feu sombre
+                    ne vous servira de rien, flamme d'Udûn. Retournez à l'Ombre! Vous ne pouvez passer.</q>
+                <p><small>Gandalf Le Gris</small></p>
+            </blockquote>
+            <div class="btn green_btn">
+                <a class="navbar-brand logo" href="{{ path('klass_homepage') }}">
+                    Retourner à l'accueil
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock body %}

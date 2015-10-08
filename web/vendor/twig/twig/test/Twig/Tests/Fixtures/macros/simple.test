@@ -1,0 +1,22 @@
+--TEST--
+macro
+--TEMPLATE--
+{% import _self as test %}
+{% from _self import test %}
+
+{% macro test(a, a) -%}
+    {{ a|default('a') }}<br />
+    {{- a|default('a') }}<br />
+{%- endmacro %}
+
+{{ test.test() }}
+{{ test() }}
+{{ test.test(1, "c") }}
+{{ test(1, "c") }}
+--DATA--
+return array();
+--EXPECT--
+a<br />a<br />
+a<br />a<br />
+1<br />c<br />
+1<br />c<br />

@@ -1,0 +1,205 @@
+
+.klass .subscription_bloc {
+	padding: 30px;
+		text-align: left;
+}
+
+.klass .subscription_bloc h1, 
+.klass .subscription_bloc .validation_button {
+	text-align: center;
+}
+
+.klass .subscription_bloc form.connection_form {
+	margin-top: 30px;
+}
+
+.klass .subscription_bloc form.connection_form label {
+	width: 120px;
+	text-align: left;
+}
+
+.klass .subscription_bloc form .form-title {
+	border-bottom: 1px solid #A0A0A0;
+	margin-bottom: 20px;
+}
+
+.klass .radio-inline,
+.klass .checkbox-inline {
+	line-height: 30px;
+}
+
+.klass .radio-inline label,
+.klass .checkbox-inline label {
+	line-height: 20px;
+}
+
+.klass .radio-inline label {
+	width: 80px;
+}
+
+.klass .subscription_bloc.connection .form-group {
+	margin-bottom: 0;
+}
+
+.klass .subscription_bloc.connection .form-group input[type="checkbox"],
+.klass .subscription_bloc.connection .form-group label {
+	vertical-align: bottom;
+}
+
+.klass .subscription_bloc.connection .validation_button input {
+	width: 200px;
+	height: 35px;
+	margin-top: 20px;
+} 
+
+.klass .subscription_bloc form.connection_form li:not(:first-child) {
+	margin-top: 10px;
+}
+
+.klass .error_msg {
+    color: red;
+    margin-bottom: 10px;
+}
+	
+.klass .subscription_bloc form .form-inline.authorization,
+.klass .subscription_bloc form .form-inline.licenceplate {
+    display: none;
+}
+
+@media (min-width:768px) {
+	
+	.klass .cover_content {
+		position: absolute;
+		margin-left: -300px;
+		left: 50%;
+	}
+	
+	.klass .subscription_bloc {
+		display: inline-block;
+		width: 600px;
+		background: rgba(255, 255, 255, 1);
+		padding: 25px;
+	}	
+
+	.klass .subscription_bloc.connection {
+		position: relative;
+		width: 420px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+
+	.klass .subscription_bloc.connection form input {
+		width: 200px;
+	}
+	
+	.klass .subscription_bloc .form-inline {
+		margin-bottom: 20px;
+	}
+	
+	.klass .subscription_bloc form .right-group {
+		float: right;
+	}
+	
+	.klass .subscription_bloc form label {
+		width: 90px;
+		margin-right: 10px;
+	}
+	
+	.klass .subscription_bloc  form .moreinformation label {
+		width: 300px;
+	}
+	
+	.klass .subscription_bloc  form .moreinformation textarea {
+		width: 540px;
+		height: 60px;
+		max-width: 540px;
+	}
+	
+	.klass .subscription_bloc form .form-inline {
+		width: 100%;
+	}
+	
+	.klass .subscription_bloc form .form-inline.streetnumber .form-group,
+  .klass .subscription_bloc form .form-inline.licenceplate .form-group {
+		width: 100%;
+	}
+	
+	.klass .subscription_bloc form .form-inline.streetnumber label {
+		width: 100%;
+		line-height: 12px;
+	}
+	
+	.klass .subscription_bloc form .form-inline.streetnumber input {
+		width: 100%;
+		float : right;
+	}
+	
+	.klass .subscription_bloc form input {
+		width: 160px;
+		height: 30px;
+	}
+	
+	.klass .subscription_bloc form input[type="checkbox"],
+	.klass .subscription_bloc form input[type="radio"] {
+		width: 15px;
+		height: 25px;
+	}
+	
+	.klass .subscription_bloc form select,
+  .klass .subscription_bloc form .form-inline.licenceplate input {
+		width: 250px;
+	}	
+	
+	.klass .subscription_bloc form .form-inline.age label {
+	   width: 180px;
+	}
+	.klass .subscription_bloc form .form-inline.age .form-group .radio-inline label {
+	   width: 80px;
+	}
+	.klass .subscription_bloc form .form-inline.driverornot label,
+	.klass .subscription_bloc form .form-inline.trip label,
+  .klass .subscription_bloc form .form-inline.licenceplate label {
+		width: 240px;
+		vertical-align: top;
+	}
+	
+	.klass .subscription_bloc form .checkbox-inline label {
+		width: 500px;
+	}
+	
+	.klass .subscription_bloc form .validation_button {
+		margin-bottom: 20px;
+		text-align: center;
+	}
+	
+	.klass .subscription_bloc form .checkbox-inline {
+		margin-left: 0;
+	}
+
+  .klass .subscription_bloc.connection form .form-control {
+  	display: inline-block;
+  }
+	
+	.klass .subscription_bloc form .form-inline.password .pass_line div{
+		display: inline-block;
+	}
+
+	.klass .subscription_bloc form .form-inline.password .pass_line div:first-child input {
+		margin-left: 4px;
+	}
+
+	.klass .subscription_bloc form .form-inline.password .pass_line div:not(:first-child) {
+		float: right;
+	}
+}
+
+@media (max-width:768px) {
+
+	.klass .subscription_bloc form.connection_form input[type="text"] {
+		width: 100%;
+	}
+
+	.klass .subscription_bloc form.connection_form li:not(:first-child) {
+		margin-top: 20px;
+	}
+}

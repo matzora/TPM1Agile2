@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html, width=device-width, initial-scale=1" charset="UTF-8"/>
+
+    {% block stylesheets %}
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css" media="all"/>
+    {% endblock stylesheets %}
+
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/jquery-1.11.3.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+    {% endblock %}
+
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}"/>
+</head>
+<body class="klass">
+<header>
+    <div class="header_content">
+        {% if app.user %}
+            <div class="top_bar">
+                <ul class="top_bar_navigation">
+
+                    <li>
+                        <a class="top_btn" href="{{ path('fos_user_security_logout') }}">
+                            <span>{{ app.user.username }} </span>
+                            <span><i class="fa fa-power-off"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        {% endif %}
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="{{ path('tpm1_agile2_front_homepage') }}">
+                        <img src="{{ asset('img/logo.png') }}" alt="logo Klass"/>
+                    </a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+
+                        {% if not app.user %}
+                            <li class="popdown">
+                                <a class="btn" id="connection_popdown" href="{{ path('fos_user_security_login') }}"
+                                   role="button">
+                                    <span><i class="fa fa-user"></i></span><span>Connexion</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="btn" href="{{ path('fos_user_registration_register') }}">
+                                    <span>
+                                        <i class="fa fa-pencil"></i>
+                                    </span>
+                                    <span>Inscription</span>
+                                </a>
+                            </li>
+                        {% endif %}
+
+                        {% if (app.user and is_granted("ROLE_ADMIN")) %}
+                            <li class="popdown">
+                                <a class="btn" href="{{ path('klass_stats') }}" role="button">
+                                    <span>
+                                        <i class="fa fa-bar-chart"></i>
+                                    </span>
+                                    <span>statistiques</span>
+                                </a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+<content>
+    {% block body %}
+    {% endblock body %}
+</content>
+
+</body>
+</html>

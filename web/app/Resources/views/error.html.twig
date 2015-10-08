@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html, width=device-width, initial-scale=1" charset="UTF-8"/>
+
+    {% block stylesheets %}
+        <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet" media="screen"/>
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/font-awesome.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('css/main.css') }}" type="text/css" media="all"/>
+    {% endblock stylesheets %}
+
+    <link rel="shortcut icon" href="{{ asset('img/favicon.png') }}"/>
+</head>
+<body class="klass">
+<content>
+    {% block body %}
+    {% endblock body %}
+</content>
+
+{% block javascripts %}
+    <script type="text/javascript" src="{{ asset('js/jquery-1.11.3.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/bootstrap.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+content {
+    width: 100%;
+    background: rgba(250, 250, 250, 1);
+    height: 100%;
+}
+
+.klass section.content {
+    width: 100%;
+    text-align: center;
+}
+
+.klass section.content .statistic_bloc {
+    width: 100%;
+    background: rgba(250, 250, 250, 1);
+    
+}
+    
+.klass section.content section div.stats {
+    display: block;
+    height: auto;
+    padding-top: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: left;
+}
+
+.klass section.content .statistic_bloc .statistics_nav {
+	border: none;
+	background: rgba(250, 250, 250, 1);
+}
+
+@media (max-width: 768px) {
+	.klass section.content .statistic_bloc .statistics_nav .container-fluid {
+        padding: 0;
+	}
+	
+	.klass section.content .statistic_bloc .statistics_nav .navbar-nav {
+	    margin: 0;
+	    height: 50px;
+	}
+	
+	.klass section.content .statistic_bloc .statistics_nav .navbar-nav li {
+	    width: 32.5%;
+	}
+	
+	.klass section.content .statistic_bloc .statistics_nav .navbar-nav .stats_btn {
+	    line-height: 30px;
+	}
+	
+}
+
+.klass section.content .statistic_bloc .statistics_nav .nav li {
+    display: inline-block;
+}
+
+.klass section.content section div.charts {
+    margin-top: 40px;
+}
+    
+.klass section.content section div.charts .chart {
+    display: block;
+    width: 100%;
+    height: 400px;
+}
+
+@media (min-width: 768px) {
+    
+    content {   
+        background-color: #f8f8f8;
+    }
+    
+    .klass section.content .statistic_bloc {
+        max-width: 1024px;
+        background: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 40px;
+        
+    }
+    
+    .klass section.content section {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: left;
+        margin-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+        
+    .klass section.content section div {
+        position: relative;
+    }
+    
+    .klass section.content section div.stats {
+        display: block;
+        height: auto;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #70727A;
+    }
+    .klass section.content section div.charts {
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    
+    .klass section.content section div.charts .chart {
+       display: block;
+       max-height: 400px;
+       max-width: 800px;
+       margin-left: auto;
+       margin-right: auto;
+    }
+    
+    .klass section.content section div.charts .chart .highcharts-container{
+       margin-left: auto;
+       margin-right: auto;
+    }
+     
+    .klass section.content section .stats_group {
+        padding: 10px;
+        display: inline-block;
+        
+    }
+    
+    .klass section.content section .stats_group .stat_line {
+        position: relative;
+    }
+    
+    .klass section.content section .stats_group span.stat_group {
+        display: inline-block;
+        width: 400px;
+        box-sizing: border-box;
+    }
+    
+    .klass section.content section.charts span {
+        display: inline-block;
+        padding: 10px;
+    }
+    
+}

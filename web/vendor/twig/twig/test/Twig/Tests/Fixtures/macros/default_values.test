@@ -1,0 +1,16 @@
+--TEST--
+macro
+--TEMPLATE--
+{% from _self import test %}
+
+{% macro test(a, a = 'bar') -%}
+{{ a }}{{ a }}
+{%- endmacro %}
+
+{{ test('foo') }}
+{{ test('bar', 'foo') }}
+--DATA--
+return array();
+--EXPECT--
+foobar
+barfoo
