@@ -47,7 +47,7 @@ public class APIControllerTest {
 
 	@Test
 	public void testSendRequest() {
-		assertEquals(null,api.sendRequest("http://jsonplaceholder.typicode.com/posts/1"));
+		assertEquals(true,api.sendRequest("http://jsonplaceholder.typicode.com/posts/1"));
 	}
 	
 }
