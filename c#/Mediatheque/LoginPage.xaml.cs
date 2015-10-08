@@ -19,9 +19,9 @@ namespace Mediatheque
 	/// <summary>
 	/// Logique d'interaction pour MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class LoginPage : Window
 	{
-		public MainWindow()
+		public LoginPage()
 		{
 			InitializeComponent();
 		}
@@ -30,6 +30,7 @@ namespace Mediatheque
 		{
 			string login = TextBoxLogin.Text;
 			string password = PasswordBoxLogin.Password;
+			bool rememberMe = (bool)CheckBoxRememberMe.IsChecked;
 
 			APIUtilities.RequestLogin("http://192.168.1.41/api/login");
 			if(APIUtilities.LoginOk)
@@ -40,6 +41,11 @@ namespace Mediatheque
 			{
 				// Display an error on this page
 			}
+		}
+
+		private void rememberTheUser(bool value)
+		{
+			
 		}
 	}
 }

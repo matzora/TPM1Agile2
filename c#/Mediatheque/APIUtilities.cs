@@ -15,7 +15,7 @@ namespace Mediatheque
 		/// This is for request the distant API to know if the credentials are matching
 		/// </summary>
 		/// <param name="Uri">The Uri to request</param>
-		public async static void RequestLogin (string Uri)
+		public async static void RequestLogin(string Uri)
 		{
 			HttpClient requestCredentials = new HttpClient();
 			HttpResponseMessage response = await requestCredentials.GetAsync(Uri);
